@@ -476,8 +476,8 @@ header .section {
   fill: #2196f3;
 }
 
-/* Оформление интерактивных элементов */
-.menunav-links.current, .current.contacts-links {
+/* Оформление линии на активной странице*/
+.current {
   color: #2196f3;
   fill: #2196f3;
 }

@@ -97,21 +97,22 @@ header {
   @extend .icon-smartphone;
 }
 
-/* Оформление интерактивных элементов */
+/* Оформление линии на активной странице*/
 
-.menunav-links.current {
+.current {
   color: $accent-color;
   fill: $accent-color;
-}
-.current::after {
-  position: absolute;
-  bottom: 0;
 
-  content: '';
-  display: block;
-  width: 100%;
+  &::after {
+    position: absolute;
+    bottom: 0;
 
-  height: 4px;
-  border-radius: 2px;
-  background-color: $accent-color;
+    content: '';
+    display: block;
+    width: 100%;
+
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
 }
