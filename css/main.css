@@ -357,8 +357,7 @@ a {
 .connection__field:focus-within > .connection__label,
 .connection__input:not(:placeholder-shown) + .connection__label,
 .connection__textarea:focus-within > .connection__label-textarea,
-.connection__textarea-input:not(:placeholder-shown)
-+ .connection__label-textarea {
+.connection__textarea-input:not(:placeholder-shown) + .connection__label-textarea {
   color: #2196f3;
   transform: translate(-24px, -42px);
   font-size: 12px;
@@ -367,8 +366,7 @@ a {
 }
 
 .connection__textarea:focus-within > .connection__label-textarea,
-.connection__textarea-input:not(:placeholder-shown)
-+ .connection__label-textarea {
+.connection__textarea-input:not(:placeholder-shown) + .connection__label-textarea {
   color: #2196f3;
   transform: translate(-1px, -33px);
   font-size: 12px;
@@ -389,8 +387,8 @@ a {
   background-position: center;
 }
 
-.logo-head,
-.logo-decoration {
+.logo-head {
+  margin-right: 85px;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 26px;
@@ -398,18 +396,14 @@ a {
   color: #000000;
 }
 
+.logo-head .logo-decoration {
+  color: #2196f3;
+}
+
 .head .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.logo-head {
-  margin-right: 85px;
-}
-
-.logo-decoration {
-  color: #2196f3;
 }
 
 /* оформление навигации сайта */
@@ -430,7 +424,6 @@ header .section {
 .menunav {
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
 }
 
 .menunav .item:not(:last-child) {
@@ -449,8 +442,7 @@ header .section {
   margin-right: 30px;
 }
 
-.menunav-links,
-.contacts-links {
+.menunav-links, .contacts-links {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -463,33 +455,29 @@ header .section {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menunav-links:hover, .contacts-links:hover, .menunav-links:focus, .contacts-links:focus {
+  color: #2196f3;
+}
+
 .contacts-links {
   display: flex;
   align-items: center;
 }
 
-.icon-smartphone {
+.icon-smartphone, .icon-envelope {
   margin-right: 10px;
   fill: #757575;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-envelope {
-  margin-right: 10px;
-  fill: #757575;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.contacts-links:focus .icon-smartphone, .contacts-links:focus .icon-envelope,
+.contacts-links:hover .icon-smartphone,
+.contacts-links:hover .icon-envelope {
+  fill: #2196f3;
 }
 
 /* Оформление интерактивных элементов */
-.menunav .menunav-links:hover,
-.menunav .menunav-links:focus,
-.menunav .menunav-links.current,
-.contacts .contacts-links:focus,
-.contacts .contacts-links:hover,
-.contacts-links:hover .icon-smartphone,
-.contacts-links:focus .icon-smartphone,
-.contacts-links:hover .icon-envelope,
-.contacts-links:focus .icon-envelope {
+.menunav-links.current, .current.contacts-links {
   color: #2196f3;
   fill: #2196f3;
 }
@@ -500,7 +488,6 @@ header .section {
   content: '';
   display: block;
   width: 100%;
-  /* margin-top: 28px; */
   height: 4px;
   border-radius: 2px;
   background-color: #2196f3;
