@@ -599,16 +599,15 @@ header .section {
 
 .job-list {
   display: flex;
-  /* justify-content: space-between; */
-}
-
-.job-list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .job-list-item {
   position: relative;
   width: 370px;
+}
+
+.job-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .job-title {
@@ -647,7 +646,6 @@ header .section {
 
 .team-list {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .team-list-item {

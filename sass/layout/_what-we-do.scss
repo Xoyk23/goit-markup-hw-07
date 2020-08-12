@@ -4,17 +4,16 @@
 
 .job-list {
   display: flex;
-  /* justify-content: space-between; */
-}
-
-.job-list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .job-list-item {
   position: relative;
 
   width: 370px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .job-title {
