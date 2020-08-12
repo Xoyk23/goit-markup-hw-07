@@ -555,8 +555,12 @@ header .section {
   flex-wrap: wrap;
 }
 
-.advantages-item {
+.advantages-list .advantages-item {
   width: 270px;
+}
+
+.advantages-list .advantages-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .advantages-util {
@@ -572,10 +576,6 @@ header .section {
 .icon-advantages {
   width: 70px;
   height: 70px;
-}
-
-.advantages-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .advantages-title {

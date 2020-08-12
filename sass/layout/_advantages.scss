@@ -1,11 +1,16 @@
+// секция преимуществ
+
 .advantages-list {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-}
 
-.advantages-item {
-  width: 270px;
+  .advantages-item {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .advantages-util {
@@ -22,10 +27,6 @@
 .icon-advantages {
   width: 70px;
   height: 70px;
-}
-
-.advantages-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .advantages-title {
