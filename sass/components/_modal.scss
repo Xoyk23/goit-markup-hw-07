@@ -1,6 +1,6 @@
 /* Модалка и бэкдроп*/
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -69,7 +69,9 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  /* transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  &:focus-within {
+    border-color: $accent-color;
+  }
 }
 
 .connection__field {
@@ -83,11 +85,18 @@
   left: 42px;
   transform: translateY(-50%);
 
-  /* font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em; */
-
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .connection__field:focus-within > &,
+  .connection__input:not(:placeholder-shown) + & {
+    color: $accent-color;
+
+    transform: translate(-24px, -42px);
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
 }
 
 .connection__icon {
@@ -98,6 +107,10 @@
   left: 16px;
   transform: translateY(-50%);
   margin-right: 8px;
+
+  .connection__field:focus-within & {
+    fill: $accent-color;
+  }
 }
 
 .connection__textarea {
@@ -109,6 +122,16 @@
   position: absolute;
   top: 12px;
   left: 16px;
+
+  .connection__textarea:focus-within > &,
+  .connection__textarea-input:not(:placeholder-shown) + & {
+    color: $accent-color;
+    transform: translate(-1px, -33px);
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -124,6 +147,10 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  &:focus-within {
+    border-color: $accent-color;
+  }
 }
 
 .connection__link {
@@ -137,12 +164,6 @@
 
   color: $accent-color;
 }
-
-/* .form-field-modal {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-} */
 
 /* Чекбокс вижуали хайден */
 .checkbox__input {
@@ -178,6 +199,15 @@
   border-radius: 2px;
   cursor: pointer;
 
+  .checkbox__input:checked + & {
+    background-color: $accent-color;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid $accent-color;
+    background-position: center;
+  }
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -204,54 +234,9 @@
   margin: auto;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-/* интерактивные элементы в модалке */
-
-.modal__button-close:hover .modal__icon,
-.modal__button-close:focus .modal__icon {
-  fill: $accent-color;
-}
-
-.connection__input:focus-within,
-.connection__textarea-input:focus-within {
-  border-color: $accent-color;
-}
-
-.connection__field:focus-within > .connection__label,
-.connection__input:not(:placeholder-shown) + .connection__label,
-.connection__textarea:focus-within > .connection__label-textarea,
-.connection__textarea-input:not(:placeholder-shown)
-  + .connection__label-textarea {
-  color: $accent-color;
-
-  transform: translate(-24px, -42px);
-
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-}
-
-.connection__textarea:focus-within > .connection__label-textarea,
-.connection__textarea-input:not(:placeholder-shown)
-  + .connection__label-textarea {
-  color: $accent-color;
-  transform: translate(-1px, -33px);
-
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-}
-
-.connection__field:focus-within .connection__icon {
-  fill: $accent-color;
-}
-
-.checkbox__input:checked + .checkbox__custom {
-  background-color: $accent-color;
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 2px solid $accent-color;
-  background-position: center;
+  .modal__button-close:hover &,
+  .modal__button-close:focus & {
+    fill: $accent-color;
+  }
 }

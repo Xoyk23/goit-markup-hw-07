@@ -164,7 +164,7 @@ a {
 }
 
 /* Модалка и бэкдроп*/
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -222,7 +222,10 @@ a {
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  /* transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.connection__input:focus-within {
+  border-color: #2196f3;
 }
 
 .connection__field {
@@ -235,10 +238,16 @@ a {
   top: 50%;
   left: 42px;
   transform: translateY(-50%);
-  /* font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em; */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.connection__field:focus-within > .connection__label,
+.connection__input:not(:placeholder-shown) + .connection__label {
+  color: #2196f3;
+  transform: translate(-24px, -42px);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .connection__icon {
@@ -249,6 +258,10 @@ a {
   left: 16px;
   transform: translateY(-50%);
   margin-right: 8px;
+}
+
+.connection__field:focus-within .connection__icon {
+  fill: #2196f3;
 }
 
 .connection__textarea {
@@ -263,6 +276,15 @@ a {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.connection__textarea:focus-within > .connection__label-textarea,
+.connection__textarea-input:not(:placeholder-shown) + .connection__label-textarea {
+  color: #2196f3;
+  transform: translate(-1px, -33px);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
 .connection__textarea-input {
   width: 448px;
   height: 120px;
@@ -274,6 +296,10 @@ a {
   border-radius: 4px;
 }
 
+.connection__textarea-input:focus-within {
+  border-color: #2196f3;
+}
+
 .connection__link {
   font-size: 14px;
   line-height: 1.71;
@@ -283,11 +309,6 @@ a {
   color: #2196f3;
 }
 
-/* .form-field-modal {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-} */
 /* Чекбокс вижуали хайден */
 .checkbox__input {
   position: absolute;
@@ -321,6 +342,15 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.checkbox__input:checked + .checkbox__custom {
+  background-color: #2196f3;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid #2196f3;
+  background-position: center;
+}
+
 .modal__button-close {
   position: absolute;
   top: 8px;
@@ -343,48 +373,9 @@ a {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* интерактивные элементы в модалке */
 .modal__button-close:hover .modal__icon,
 .modal__button-close:focus .modal__icon {
   fill: #2196f3;
-}
-
-.connection__input:focus-within,
-.connection__textarea-input:focus-within {
-  border-color: #2196f3;
-}
-
-.connection__field:focus-within > .connection__label,
-.connection__input:not(:placeholder-shown) + .connection__label,
-.connection__textarea:focus-within > .connection__label-textarea,
-.connection__textarea-input:not(:placeholder-shown) + .connection__label-textarea {
-  color: #2196f3;
-  transform: translate(-24px, -42px);
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-}
-
-.connection__textarea:focus-within > .connection__label-textarea,
-.connection__textarea-input:not(:placeholder-shown) + .connection__label-textarea {
-  color: #2196f3;
-  transform: translate(-1px, -33px);
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-}
-
-.connection__field:focus-within .connection__icon {
-  fill: #2196f3;
-}
-
-.checkbox__input:checked + .checkbox__custom {
-  background-color: #2196f3;
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 2px solid #2196f3;
-  background-position: center;
 }
 
 .team-socials-item-link, .footer-socials-item-link {
