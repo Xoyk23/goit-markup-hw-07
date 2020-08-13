@@ -387,6 +387,37 @@ a {
   background-position: center;
 }
 
+.team-socials-item-link, .footer-socials-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-socials-item-link:hover, .footer-socials-item-link:hover, .team-socials-item-link:focus, .footer-socials-item-link:focus {
+  background-color: #2196f3;
+}
+
+.footer-socials-item-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-socials-team, .icon_footer {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-socials-item-link:hover .icon-socials-team, .footer-socials-item-link:hover .icon-socials-team, .team-socials-item-link:hover .icon_footer, .footer-socials-item-link:hover .icon_footer {
+  fill: #ffffff;
+}
+
 .logo-head {
   margin-right: 85px;
   font-family: "Raleway", sans-serif;
@@ -640,10 +671,6 @@ header .section {
   background-color: #f5f4fa;
 }
 
-.container .team {
-  display: flex;
-}
-
 .team-list {
   display: flex;
 }
@@ -702,37 +729,8 @@ header .section {
   justify-content: center;
 }
 
-.team-socials-item-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-socials-team {
-  width: 20px;
-  height: 20px;
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-socials-item-link:hover .icon-socials-team {
-  fill: #ffffff;
-}
-
 .team-socials a {
   color: #afb1b8;
-}
-
-.team-socials-item-link:hover,
-.team-socials-item-link:focus,
-.footer-socials-item-link:hover,
-.footer-socials-item-link:focus {
-  background-color: #2196f3;
 }
 
 /* Секция постоянные клиенты */
