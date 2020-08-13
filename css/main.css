@@ -851,6 +851,10 @@ footer div.section {
   display: block;
 }
 
+.logo-footer .logo-decoration {
+  color: #2196f3;
+}
+
 .join_us {
   margin-right: 94px;
 }

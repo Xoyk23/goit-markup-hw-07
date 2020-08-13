@@ -58,6 +58,10 @@ footer div.section {
   color: #ffffff;
   text-decoration: none;
   display: block;
+
+  .logo-decoration {
+    color: $accent-color;
+  }
 }
 
 .join_us {
