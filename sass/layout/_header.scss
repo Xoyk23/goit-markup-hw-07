@@ -17,6 +17,11 @@ header {
   border-bottom: 1px solid $header-border-color;
 }
 
+header .section {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .head .container {
   display: flex;
   align-items: center;
@@ -26,11 +31,6 @@ header {
 /* оформление навигации сайта */
 .main-no-border {
   border: 0px;
-}
-
-header .section {
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 .main-nav,
