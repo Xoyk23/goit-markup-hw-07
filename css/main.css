@@ -426,6 +426,11 @@ a {
   color: #2196f3;
 }
 
+header {
+  color: var(--main-font-color);
+  border-bottom: 1px solid #ececec;
+}
+
 .head .container {
   display: flex;
   align-items: center;
@@ -437,7 +442,7 @@ a {
   border: 0px;
 }
 
-.section {
+header .section {
   padding-top: 0px;
   padding-bottom: 0px;
 }

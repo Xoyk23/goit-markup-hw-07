@@ -12,6 +12,11 @@
   }
 }
 
+header {
+  color: var(--main-font-color);
+  border-bottom: 1px solid $header-border-color;
+}
+
 .head .container {
   display: flex;
   align-items: center;
@@ -23,7 +28,7 @@
   border: 0px;
 }
 
-.section {
+header .section {
   padding-top: 0px;
   padding-bottom: 0px;
 }
